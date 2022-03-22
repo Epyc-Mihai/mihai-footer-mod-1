@@ -2,7 +2,7 @@ import ctx as ctx
 import discord
 
 class StatsMod:
-    def __init__(self, capital: str, nationality: str, country: str, updated: int, uuid: int, flag: str, created: str, lan: int, pop: int, factory: int, land: int, emp: str, rank: str, score: float, competitiveRank: str, gdp: str, balance: str, currency: str, coinz: str, tech: str, keys: str, badge1: str, badge2: str, badge3: str):
+    def __init__(self, capital: str, name: str, nationality: str, country: str, updated: int, uuid: int, flag: str, created: str, lan: int, pop: int, factory: int, land: int, emp: str, rank: str, score: float, competitiveRank: str, gdp: str, balance: str, currency: str, coinz: str, tech: str, keys: str, badge1: str, badge2: str, badge3: str):
         self.country = country
         self.updated = updated
         self.uuid = uuid
@@ -26,6 +26,7 @@ class StatsMod:
         self.badge2 = badge2
         self.badge3 = badge3
         self.capital = capital
+        self.name = name
         self.nationality = nationality
 
     def UserMod(self):
@@ -57,7 +58,7 @@ class StatsMod:
         embed.add_field(name="Capital City", value=f"{(self.capital)}", inline=False)
         embed.add_field(name="Technology Points", value=f"{(self.tech)}", inline=False)
         embed.add_field(name="Free Land Area", value=f"{(self.land)}", inline=False)
-        embed.add_field(name="Country Name", value=f"{(self.country)}", inline=False)
+        embed.add_field(name="Name", value=f"{(self.country)} {(self.name)}", inline=False)
         embed.set_footer(text="My nuts, hang, and, add, @everyone.")
 
 
